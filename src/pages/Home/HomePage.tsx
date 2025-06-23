@@ -559,11 +559,11 @@ const SimpleExcelDashboard = () => {
 
   // Custom label formatter for bars
   const renderCustomLabel = (props: any) => {
-    const { x, y, width, value } = props;
+    const { x, y, width, height, value } = props;
     const formattedValue = new Intl.NumberFormat().format(
       Math.round(value * 100) / 100
     );
-
+    console.log(height);
     return (
       <text
         x={x + width / 2}
@@ -622,12 +622,15 @@ const SimpleExcelDashboard = () => {
             <Legend />
             <Bar dataKey={config.yAxis} radius={[4, 4, 0, 0]}>
               <LabelList content={renderCustomLabel} />
-              {config.data.map((index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={chartColors[index % chartColors.length]}
-                />
-              ))}
+              {config.data.map((entry, index) => {
+                console.log(entry);
+                return (
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={chartColors[index % chartColors.length]}
+                  />
+                );
+              })}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
