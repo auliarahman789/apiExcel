@@ -23,7 +23,6 @@ import {
   Type,
   DollarSign,
   Tag,
-  Map,
 } from "lucide-react";
 import * as XLSX from "xlsx";
 
@@ -638,9 +637,9 @@ const SimpleExcelDashboard = () => {
       </div>
     );
   };
-  const navigateToMap = () => {
-    window.location.href = "/map";
-  };
+  // const navigateToMap = () => {
+  //   window.location.href = "/map";
+  // };
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="flex h-screen">
@@ -657,13 +656,13 @@ const SimpleExcelDashboard = () => {
                 </div>
               </div>
 
-              <button
+              {/* <button
                 onClick={navigateToMap}
                 className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 shadow-md"
               >
                 <Map className="w-5 h-5" />
                 <span>View Map</span>
-              </button>
+              </button> */}
             </div>
 
             {error && (

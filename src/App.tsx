@@ -9,7 +9,7 @@ export default function App() {
       <Router>
         <Routes>
           <Route
-            path="/"
+            path="/aa"
             element={
               <>
                 <PageTitle title="Lesson Proyek Arul" />
@@ -19,7 +19,7 @@ export default function App() {
             }
           />
           <Route
-            path="/map"
+            path="/"
             element={
               <>
                 <PageTitle title="Lesson Proyek Arul" />
